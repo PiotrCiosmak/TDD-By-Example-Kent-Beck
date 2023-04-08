@@ -16,6 +16,7 @@ public class Money implements Expression
         return new Money(amount, "CHF");
     }
 
+    @Override
     public Expression times(int multiplier)
     {
         return new Money(amount * multiplier, currency);
@@ -46,6 +47,7 @@ public class Money implements Expression
         return amount == money.amount && currency.equals(money.currency());
     }
 
+    @Override
     public String toString()
     {
         return amount + " " + currency;
