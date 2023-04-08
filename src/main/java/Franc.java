@@ -1,4 +1,4 @@
-public class Franc
+public class Franc extends Money
 {
     Franc(int amount)
     {
@@ -9,13 +9,4 @@ public class Franc
     {
         return new Franc(amount * multiplier);
     }
-
-    @Override
-    public boolean equals(Object object)
-    {
-        Franc Franc = (Franc) object;
-        return amount == Franc.amount;
-    }
-
-    private int amount;
 }
